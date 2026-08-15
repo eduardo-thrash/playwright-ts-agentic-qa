@@ -1,0 +1,22 @@
+{
+  "name": "agentic-qa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Playwright BDD + Allure project used as an Agentic QA learning environment",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:headed": "bddgen && playwright test --headed",
+    "test:debug": "bddgen && playwright test --debug",
+    "test:chromium": "bddgen && playwright test --project=chromium",
+    "allure:generate": "allure generate allure-results -o allure-report --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "allure-playwright": "^3.10.2",
+    "playwright-bdd": "^9.2.0",
+    "typescript": "^5.9.0"
+  }
+}
